@@ -1,15 +1,15 @@
 class Auto{
 
 //Atributos o estadoss ,usar 3 de cada uno.
-modelo: string;
+marca: string;
 color: string;
 precio: number;
 
 
 //funcionalidades 
 
-constructor (Modelo:string,Color:string,Precio:number){
-this.modelo = modelo;
+constructor (marca:string,color:string,precio:number){
+this.marca = marca;
 this.color = color;
 this.precio = precio;
 
@@ -38,10 +38,11 @@ parar(){
 
 
 
-let auto = new Auto("raptor","Azul",22603000);
+let auto = new Auto("ford-raptor","Azul",22603000);
 
 auto.girar();
 
-console.log(auto.modelo);
+console.log(auto.marca);
 console.log(auto.color);
+console.log(auto.precio);
 

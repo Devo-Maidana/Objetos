@@ -1,9 +1,9 @@
 var Auto = /** @class */ (function () {
     //funcionalidades 
-    function Auto(Modelo, Color, Precio) {
-        this.Modelo = Modelo;
-        this.Color = Color;
-        this.Precio = Precio;
+    function Auto(marca, color, precio) {
+        this.marca = marca;
+        this.color = color;
+        this.precio = precio;
     }
     Auto.prototype.estacionar = function () {
         console.log("Estacionar a 45 grados");
@@ -16,3 +16,8 @@ var Auto = /** @class */ (function () {
     };
     return Auto;
 }());
+var auto = new Auto("ford-raptor", "Azul", 22603000);
+auto.girar();
+console.log(auto.marca);
+console.log(auto.color);
+console.log(auto.precio);
