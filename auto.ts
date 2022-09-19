@@ -46,9 +46,8 @@ parar(){
 
 
 let auto1 = new Auto("ford-raptor",22603000);
-let auto2 = new Auto("ford-focus",2000000);
 
-auto2.colorAuto = "Rojo";
-console.log  (auto2.colorAuto)
 
+auto1.colorAuto = "Rojo";
+console.log  (auto1.colorAuto)
 

@@ -1,10 +1,20 @@
 var Auto = /** @class */ (function () {
     //funcionalidades 
-    function Auto(marca, color, precio) {
+    function Auto(marca, precio) {
+        this.color = "";
         this.marca = marca;
-        this.color = color;
         this.precio = precio;
     }
+    Object.defineProperty(Auto.prototype, "colorAuto", {
+        get: function () {
+            return "";
+        },
+        set: function (color) {
+            this.color = color;
+        },
+        enumerable: false,
+        configurable: true
+    });
     Auto.prototype.estacionar = function () {
         console.log("Estacionar a 45 grados");
     };
@@ -16,8 +26,6 @@ var Auto = /** @class */ (function () {
     };
     return Auto;
 }());
-var auto = new Auto("ford-raptor", "Azul", 22603000);
-auto.girar();
-console.log(auto.marca);
-console.log(auto.color);
-console.log(auto.precio);
+var auto1 = new Auto("ford-raptor", 22603000);
+auto1.colorAuto = "Rojo";
+console.log(auto1.colorAuto);
