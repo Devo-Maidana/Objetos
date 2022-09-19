@@ -4,16 +4,16 @@ class Vehiculo{
 
     private titular:string;
     private modelo:string;
-    private marca:string;
     private color:string;
+    private precio:number;
     
     
 
-    constructor(parametroTitular,parametroMarca:string, parametroModelo:string, parametroColor:string ){
+    constructor(parametroTitular,parametroModelo:string,parametroColor:string,parametroPrecio: number ){
         this.titular = parametroTitular;
-        this.marca = parametroMarca;
         this.modelo = parametroModelo;
         this.color = parametroColor;
+        this.precio = parametroPrecio;
        
     }
 
@@ -25,7 +25,7 @@ class Vehiculo{
         return this.titular;
     }
 
-    public setTular(parametroTitular: string):void{
+    public setTitular(parametroTitular: string):void{
         this.titular= parametroTitular;
     }
 
@@ -38,6 +38,7 @@ class Vehiculo{
         this.modelo = parametroModelo;
     }
 
+
     public getColor():string{
         return this.color;
     }
@@ -46,18 +47,24 @@ class Vehiculo{
         this.color = parametroColor;
     }
 
-   
+
+    public getPrecio():number{
+        return this.precio;
+    }
+
+    public setPrecio(parametroPrecio:number):void{
+        this.precio= parametroPrecio;
+    }   
 
 }
 
-let miVehiculo = new Vehiculo("Devo Maidana","FORD","RAPTOR","AZUL");
-
-let colorAuto : string = miVehiculo.getColor();
-
-let modeloAuto : string = miVehiculo.getModelo();
-
+let miVehiculo = new Vehiculo("Devo Maidana","FORD-RAPTOR","AZUL",140000);
 let titularAuto : string = miVehiculo.getTitular();
+let modeloAuto : string = miVehiculo.getModelo();
+let colorAuto : string = miVehiculo.getColor();
+let precioAuto : number = miVehiculo.getPrecio();
 
-console.log('Color del Auto: '+ colorAuto);
-console.log('Modelo selecionado: '+ modeloAuto );
-console.log('El Titutalr del Vehiculo es de : '+ titularAuto );
+console.log("El Titutalr del Vehiculo es de : " + titularAuto );
+console.log("Modelo selecionado: "+ modeloAuto );
+console.log("Color del Auto: "+ colorAuto);
+console.log("Precio Pagado: " + precioAuto);

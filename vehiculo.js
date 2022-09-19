@@ -1,16 +1,15 @@
 var Vehiculo = /** @class */ (function () {
-    function Vehiculo(parametroTitular, parametroMarca, parametroModelo, parametroColor) {
+    function Vehiculo(parametroTitular, parametroModelo, parametroColor, parametroPrecio) {
         this.titular = parametroTitular;
-        this.marca = parametroMarca;
         this.modelo = parametroModelo;
         this.color = parametroColor;
-        this.cambioColor = true; //uso del booleano para cambiodecolor sea falso...
+        this.precio = parametroPrecio;
     }
     // Funciones     usar get obtener valor y set  infromar valor
     Vehiculo.prototype.getTitular = function () {
         return this.titular;
     };
-    Vehiculo.prototype.setTular = function (parametroTitular) {
+    Vehiculo.prototype.setTitular = function (parametroTitular) {
         this.titular = parametroTitular;
     };
     Vehiculo.prototype.getModelo = function () {
@@ -25,18 +24,20 @@ var Vehiculo = /** @class */ (function () {
     Vehiculo.prototype.setColor = function (parametroColor) {
         this.color = parametroColor;
     };
-    Vehiculo.prototype.getcambioColor = function () {
-        return this.cambioColor;
+    Vehiculo.prototype.getPrecio = function () {
+        return this.precio;
     };
-    Vehiculo.prototype.setcambioColor = function () {
-        this.cambioColor = this.cambioColor; //prguntar en caso de que si quiero cambiar de color sea true.
+    Vehiculo.prototype.setPrecio = function (parametroPrecio) {
+        this.precio = parametroPrecio;
     };
     return Vehiculo;
 }());
-var miVehiculo = new Vehiculo("Devo Maidana", "FORD", "RAPTOR", "AZUL");
-var colorAuto = miVehiculo.getColor();
-var modeloAuto = miVehiculo.getModelo();
+var miVehiculo = new Vehiculo("Devo Maidana", "FORD-RAPTOR", "AZUL", 140000);
 var titularAuto = miVehiculo.getTitular();
-console.log('Color del Auto: ' + colorAuto);
-console.log('Modelo selecionado: ' + modeloAuto);
-console.log('El Titutalr del Vehiculo es de : ' + titularAuto);
+var modeloAuto = miVehiculo.getModelo();
+var colorAuto = miVehiculo.getColor();
+var precioAuto = miVehiculo.getPrecio();
+console.log("El Titutalr del Vehiculo es de : " + titularAuto);
+console.log("Modelo selecionado: " + modeloAuto);
+console.log("Color del Auto: " + colorAuto);
+console.log("Precio Pagado: " + precioAuto);
