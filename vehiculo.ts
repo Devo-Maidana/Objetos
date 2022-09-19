@@ -1,12 +1,12 @@
 class Vehiculo{
 
-    //Variables o atributos
+    //Variables o atributos mas modificadores de accesos public y private - getters y setters 
 
     private titular:string;
     private modelo:string;
     private marca:string;
     private color:string;
-    private cambioColor:boolean; //utilizo un booleano para decirque es falso si devo quiere cambiar de color Azul.
+    
     
 
     constructor(parametroTitular,parametroMarca:string, parametroModelo:string, parametroColor:string ){
@@ -14,7 +14,7 @@ class Vehiculo{
         this.marca = parametroMarca;
         this.modelo = parametroModelo;
         this.color = parametroColor;
-        this.cambioColor = true;//uso del booleano para cambiodecolor sea falso...
+       
     }
 
 
@@ -47,15 +47,6 @@ class Vehiculo{
     }
 
    
-
-    getcambioColor():boolean{
-        return this.cambioColor;
-    }
-
-    setcambioColor():void{
-        this.cambioColor = this.cambioColor; //prguntar en caso de que si quiero cambiar de color sea true.
-        
-    }
 
 }
 
