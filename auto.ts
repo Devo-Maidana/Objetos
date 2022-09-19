@@ -1,22 +1,29 @@
 class Auto{
 
 //Atributos o estadoss ,usar 3 de cada uno.
-marca: string;
-color: string;
-precio: number;
-
+private marca: string;
+private precio: number;
+private color: string ="";
 
 //funcionalidades 
 
-constructor (marca:string,color:string,precio:number){
+constructor (marca:string,precio:number){
 this.marca = marca;
-this.color = color;
 this.precio = precio;
-
 
 }
 
 
+set colorAuto (color : string){
+    
+    this.color = color ;
+
+}
+
+get colorAuto (){
+
+    return "";
+}
 
 
 estacionar(){
@@ -38,11 +45,10 @@ parar(){
 
 
 
-let auto = new Auto("ford-raptor","Azul",22603000);
+let auto1 = new Auto("ford-raptor",22603000);
+let auto2 = new Auto("ford-focus",2000000);
 
-auto.girar();
+auto2.colorAuto = "Rojo";
+console.log  (auto2.colorAuto)
 
-console.log(auto.marca);
-console.log(auto.color);
-console.log(auto.precio);
 
