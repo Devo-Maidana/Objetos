@@ -1,8 +1,8 @@
 export  class IntegranteSelecion {
     protected nombre: string;
     protected apellido: string;
-    private numeroPasaporte: number;
-    private fechaNacimiento: number;
+    private numeropasaporte: number;
+    private fechanacimiento: number;
   
   
   
@@ -10,8 +10,8 @@ export  class IntegranteSelecion {
     public constructor(Nombre: string, Apellido: string, Numeropasaporte: number, Fechanacimiento: number) {
       this.nombre = Nombre;
       this.apellido = Apellido;
-      this.numeroPasaporte = Numeropasaporte;
-      this.fechaNacimiento = Fechanacimiento;
+      this.numeropasaporte = Numeropasaporte;
+      this.fechanacimiento = Fechanacimiento;
   
     }
 
