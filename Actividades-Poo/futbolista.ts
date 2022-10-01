@@ -1,7 +1,7 @@
 import { IntegranteSelecion } from "./integranteSelecion";
  export  class Futbolista  extends IntegranteSelecion {
     
-    constructor(Nombre: string, Apellido: string,Numeropasaporte: number, Fechanacimiento: number) {
+    constructor(Nombre: string, Apellido: string,Numeropasaporte: number, Fechanacimiento: string) {
       
      super(Nombre,Apellido,Numeropasaporte,Fechanacimiento);
       
@@ -14,12 +14,13 @@ import { IntegranteSelecion } from "./integranteSelecion";
    
       
       //propios 
-    public get getjugarPartido(): string {
-          return this.nombre
+    public getjugarPartido(): string {
+          
           console.log(`El jugador ${ this.nombre } esta con mejor energia para jugar!`);
+          return this.nombre
        }
 
-    public set setjugarPartido(nombre:string){
+    public  setjugarPartido(nombre:string){
          this.nombre = nombre
 
     }
@@ -27,12 +28,13 @@ import { IntegranteSelecion } from "./integranteSelecion";
 
 
 
-    public get getentrenar(): string {
-          return this.apellido
+    public  getEntrenar(): string {
+          
           console.log(`El jugador ${ this.apellido } tiene que entrenar Penales y Tiros Libres !`);
+          return this.apellido
        }
    
-    public set setentrenar(apellido:string){
+    public setEntrenar(apellido:string){
 
        this.apellido = apellido 
     }

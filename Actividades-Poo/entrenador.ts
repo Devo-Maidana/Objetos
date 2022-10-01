@@ -2,7 +2,7 @@ import { IntegranteSelecion } from "./integranteSelecion";
 
 export  class Entrenador  extends IntegranteSelecion {
     
-    constructor(Nombre: string, Apellido: string,Numeropasaporte: number, Fechanacimiento: number) {
+    constructor(Nombre: string, Apellido: string,Numeropasaporte: number, Fechanacimiento: string) {
       
      super(Nombre,Apellido,Numeropasaporte,Fechanacimiento);
       
@@ -12,11 +12,12 @@ export  class Entrenador  extends IntegranteSelecion {
 
         
         //propios
-     public get getDirigirPartido(): string {
-            return this.apellido
+     public  getDirigirPartido(): string {
+           
             console.log(`El entrenador ${ this.apellido } tiene que dirigir a Francia!`);
+            return this.apellido
          }
-     public set setDirigirPartido (apellido:string){
+     public  setDirigirPartido (apellido:string){
 
            this.apellido = apellido 
      }

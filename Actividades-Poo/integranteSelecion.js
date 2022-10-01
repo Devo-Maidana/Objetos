@@ -5,41 +5,29 @@ var IntegranteSelecion = /** @class */ (function () {
     function IntegranteSelecion(Nombre, Apellido, Numeropasaporte, Fechanacimiento) {
         this.nombre = Nombre;
         this.apellido = Apellido;
-        this.numeroPasaporte = Numeropasaporte;
-        this.fechaNacimiento = Fechanacimiento;
+        this.numeropasaporte = Numeropasaporte;
+        this.fechanacimiento = Fechanacimiento;
     }
-    Object.defineProperty(IntegranteSelecion.prototype, "getConsentrarse", {
-        // constructor, getter y setter en comun con clases hijas 
-        //en comunun
-        get: function () {
-            return this.nombre;
-            console.log("El jugador ".concat(this.apellido, " tiene que concentrar en el Hotel av.mitre!"));
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(IntegranteSelecion.prototype, "setConsentrarse", {
-        set: function (nombre) {
-            this.nombre = nombre;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(IntegranteSelecion.prototype, "getViajar", {
-        get: function () {
-            return this.nombre;
-            console.log("El jugador ".concat(this.nombre, " teiene que Vijar a Qatar !"));
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(IntegranteSelecion.prototype, "setViajar", {
-        set: function (nombre) {
-            this.nombre = nombre;
-        },
-        enumerable: false,
-        configurable: true
-    });
+    // constructor, getter y setter en comun con clases hijas 
+    //en comunun
+    IntegranteSelecion.prototype.getConsentrarse = function () {
+        console.log("El jugador ".concat(this.apellido, " tiene que concentrar en el Hotel av.mitre!"));
+        return this.nombre;
+    };
+    IntegranteSelecion.prototype.setConsentrarse = function (nombre) {
+        this.nombre = nombre;
+    };
+    IntegranteSelecion.prototype.getViajar = function () {
+        console.log("El jugador ".concat(this.nombre, " teiene que Vijar a Qatar !"));
+        return this.nombre;
+    };
+    IntegranteSelecion.prototype.setViajar = function (nombre) {
+        this.nombre = nombre;
+    };
+    IntegranteSelecion.prototype.getFechaNac = function () {
+        var fecha = new Date(this.fechanacimiento);
+        return fecha;
+    };
     return IntegranteSelecion;
 }());
 exports.IntegranteSelecion = IntegranteSelecion;

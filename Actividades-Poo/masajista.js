@@ -22,22 +22,11 @@ var Masajista = /** @class */ (function (_super) {
     function Masajista(Nombre, Apellido, Numeropasaporte, Fechanacimiento) {
         return _super.call(this, Nombre, Apellido, Numeropasaporte, Fechanacimiento) || this;
     }
-    Object.defineProperty(Masajista.prototype, "getdarMasaje", {
-        //propios
-        get: function () {
-            return this.apellido;
-            console.log("El masajista  ".concat(this.apellido, " le dara un masaje a el").concat(this.nombre, " "));
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Masajista.prototype, "setdarMasaje", {
-        set: function (apellido) {
-            this.apellido = apellido;
-        },
-        enumerable: false,
-        configurable: true
-    });
+    //propios
+    Masajista.prototype.getdarMasaje = function () {
+        console.log("El masajista  ".concat(this.apellido, " le dara un masaje a el Jugador con Contractura en Aductor"));
+        return this.apellido;
+    };
     return Masajista;
 }(integranteSelecion_1.IntegranteSelecion));
 exports.Masajista = Masajista;

@@ -2,12 +2,12 @@ export  class IntegranteSelecion {
     protected nombre: string;
     protected apellido: string;
     private numeropasaporte: number;
-    private fechanacimiento: number;
+    private fechanacimiento: string;
   
   
   
   
-    public constructor(Nombre: string, Apellido: string, Numeropasaporte: number, Fechanacimiento: number) {
+    public constructor(Nombre: string, Apellido: string, Numeropasaporte: number, Fechanacimiento: string) {
       this.nombre = Nombre;
       this.apellido = Apellido;
       this.numeropasaporte = Numeropasaporte;
@@ -21,28 +21,32 @@ export  class IntegranteSelecion {
 
    
     //en comunun
-    public get  getConsentrarse(): string {
-        return this.nombre
+    public  getConsentrarse(): string {
+        
         console.log(`El jugador ${ this.apellido } tiene que concentrar en el Hotel av.mitre!`);
+        return this.nombre
      }
-    public set setConsentrarse(nombre:string){
+    public setConsentrarse(nombre:string){
         this.nombre= nombre
     }
 
-    public get getViajar(): string {
-        return  this.nombre 
+    public  getViajar(): string {
+       
         console.log(`El jugador ${ this.nombre  } teiene que Vijar a Qatar !`);
-        
+        return  this.nombre  
     }
     
 
-    public set setViajar(nombre:string){
+    public  setViajar(nombre:string){
         this.nombre = nombre;
        
     }
 
 
-
+    public getFechaNac(){
+        let fecha = new Date(this.fechanacimiento);
+        return fecha;
+    }
 
 
     }

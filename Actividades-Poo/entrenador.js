@@ -22,22 +22,14 @@ var Entrenador = /** @class */ (function (_super) {
     function Entrenador(Nombre, Apellido, Numeropasaporte, Fechanacimiento) {
         return _super.call(this, Nombre, Apellido, Numeropasaporte, Fechanacimiento) || this;
     }
-    Object.defineProperty(Entrenador.prototype, "getDirigirPartido", {
-        //propios
-        get: function () {
-            return this.apellido;
-            console.log("El entrenador ".concat(this.apellido, " tiene que dirigir a Francia!"));
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Entrenador.prototype, "setDirigirPartido", {
-        set: function (apellido) {
-            this.apellido = apellido;
-        },
-        enumerable: false,
-        configurable: true
-    });
+    //propios
+    Entrenador.prototype.getDirigirPartido = function () {
+        console.log("El entrenador ".concat(this.apellido, " tiene que dirigir a Francia!"));
+        return this.apellido;
+    };
+    Entrenador.prototype.setDirigirPartido = function (apellido) {
+        this.apellido = apellido;
+    };
     return Entrenador;
 }(integranteSelecion_1.IntegranteSelecion));
 exports.Entrenador = Entrenador;

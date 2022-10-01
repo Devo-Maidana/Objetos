@@ -1,2 +1,0 @@
-
-const anime = require ( ' animejs ' ) ;  
