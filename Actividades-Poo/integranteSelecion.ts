@@ -32,7 +32,7 @@ export  class IntegranteSelecion {
 
     public  getViajar(): string {
        
-        console.log(`El jugador ${ this.nombre  } teiene que Vijar a Qatar !`);
+        console.log(`El jugador ${ this.nombre  } tiene que Vijar a Qatar !`);
         return  this.nombre  
     }
     
