@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var CuentaAhorro_1 = require("./CuentaAhorro");
+var CuentaCorriente_1 = require("./CuentaCorriente");
+var Persona_1 = require("./Persona");
+var Devo = new Persona_1.Persona("Devora", "Maidana", 74777888);
+var ctacteDevo = new CuentaCorriente_1.CuentaCorriente(Devo, 456789);
+var ctaAhorroDevo = new CuentaAhorro_1.CuentaAhorro(Devo, 8888888);
+ctaAhorroDevo.ingresarSaldo(1000);
+ctaAhorroDevo.setInteres(2);
+ctaAhorroDevo.actualizarSaldo();
+var saldo = ctaAhorroDevo.getSaldo();
+console.log("saldo de devo" + saldo);
